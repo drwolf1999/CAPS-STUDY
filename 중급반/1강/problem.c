@@ -46,7 +46,7 @@ int main() {
         Node* newNode = NewNode(i);
         if (list->cur == NULL) { // 초기에 비어있으면 대입
             list->HEAD = list->cur = newNode;
-            newNode = list->cur;
+            newNode->link = list->cur;
         }
         else { // 아니면 연결
             list->cur->link = newNode;
